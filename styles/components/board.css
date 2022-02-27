@@ -1,0 +1,7 @@
+/* components/board.css */
+
+.board {
+    @apply relative;
+    @apply flex flex-row flex-wrap-reverse;
+    flex-flow: flex;
+}

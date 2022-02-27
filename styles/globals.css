@@ -1,0 +1,7 @@
+@import 'components.css';
+
+/* https://tailwindcss.com/docs/using-with-preprocessors#using-post-css-as-your-preprocessor */
+/* https://tailwindcss.com/docs/functions-and-directives#tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

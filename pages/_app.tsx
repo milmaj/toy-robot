@@ -1,8 +1,6 @@
-import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
-import variables from '../styles/variables.module.scss'
-
-console.log(variables.primaryColor);
+import '../styles/globals.css'
+// import variables from '../styles/variables.module.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
