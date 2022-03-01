@@ -1,0 +1,5 @@
+/* components/ControlPanel.css */
+
+.ControlPanel {
+    @apply flex flex-col absolute top-4 right-4;
+}

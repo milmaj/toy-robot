@@ -1,7 +1,35 @@
-/* components/board.css */
+/* components/Board.css */
 
 .board {
     @apply relative;
     @apply flex flex-row flex-wrap-reverse;
-    flex-flow: flex;
+    @apply bg-slate-50/10;
+    
+    width: 600px;
+    height: 600px;
+
+    /* transform: perspective(450px) translateZ(-20px) translateY(-50px) rotateX(25deg); */
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+
+    & li {
+        @apply border-2 border-slate-800/60;
+        list-style: none;
+    }
+
+    & .board__bot {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease;
+        @apply absolute;
+        & .board__bot__arrow {
+            border: solid white;
+            border-width: 0 4px 4px 0;
+            display: inline-block;
+            padding: 4px;
+            transition: all 0.5s ease;
+        }
+    }
 }

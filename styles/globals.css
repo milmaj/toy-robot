@@ -1,4 +1,6 @@
 @import 'components.css';
+@import 'pages.css';
+
 
 /* https://tailwindcss.com/docs/using-with-preprocessors#using-post-css-as-your-preprocessor */
 /* https://tailwindcss.com/docs/functions-and-directives#tailwind */

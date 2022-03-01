@@ -1,3 +1,4 @@
 /* components.css */
 
-@import "./components/board.css";
+@import "./components/Board.css";
+@import "./components/ControlPanel.css";
