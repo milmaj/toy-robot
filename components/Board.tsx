@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Direction } from '../type/Direction';
+import ControlPanel from './ControlPanel';
 
 interface Props {
   square: number;
@@ -41,7 +42,7 @@ const Board: React.FC<Props> = props => {
         // const ySteps = newY - y
 
         if (newX > (square - 1) || newX < 0 || newY > (square - 1) || newY < 0) {
-          // error handling
+          // error handling 
           return null
         }
         setDirection(newDirection)
@@ -51,20 +52,44 @@ const Board: React.FC<Props> = props => {
 
       },
       move: () => {
+        if (
+          x < 0 || y < 0
+        ) {
+          return null
+        }
+
         direction === 1 ? commands.place(x + 1, y, direction) : null
         direction === 2 ? commands.place(x, y - 1, direction) : null
         direction === 3 ? commands.place(x - 1, y, direction) : null
         direction === 4 ? commands.place(x, y + 1, direction) : null
       },
       left: () => {
+        if (
+          x < 0 || y < 0
+        ) {
+          return null
+        }
+
         setDirection(direction === 1 ? 4 : (direction - 1 as Direction));
         setRotate(rotate - 90);
       },
       right: () => {
+        if (
+          x < 0 || y < 0
+        ) {
+          return null
+        }
+
         setDirection(direction === 4 ? 1 : (direction + 1 as Direction));
         setRotate(rotate + 90);
       },
       report: () => {
+        if (
+          x < 0 || y < 0
+        ) {
+          return null
+        }
+
         console.log(x, y, directionNames[direction])
         alert(`${x},${y},${directionNames[direction]}`)
       },
@@ -113,6 +138,7 @@ const Board: React.FC<Props> = props => {
 
   return (
     <div className="board">
+      <ControlPanel x={x} y={y} />
       <div className="board__bot" style={{ width: `calc(100%/${square})`, height: `calc(100%/${square})`, left, bottom }}>
         <div className="board__bot__arrow" style={{ transform: `rotate(${rotate}deg)` }}></div>
       </div>

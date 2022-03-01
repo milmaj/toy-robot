@@ -5,6 +5,7 @@
     @apply flex flex-row flex-wrap-reverse;
     @apply bg-slate-50/10;
     
+    
     width: 600px;
     height: 600px;
 
