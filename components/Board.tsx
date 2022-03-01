@@ -35,7 +35,7 @@ const Board: React.FC<Props> = props => {
 
   const commands = useMemo(() => {
     return {
-      place: (newX: number = 0, newY: number = 0, newDirection: Direction) => {
+      place: (newX: number = 0, newY: number = 0, newDirection?: Direction) => {
 
         // steps
         // const xSteps = newX - x
@@ -45,7 +45,8 @@ const Board: React.FC<Props> = props => {
           // error handling 
           return null
         }
-        setDirection(newDirection)
+
+        newDirection ? setDirection(newDirection) : null
 
         setX(newX)
         setY(newY)

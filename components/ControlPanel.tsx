@@ -79,6 +79,7 @@ const ControlPanel: React.FC<Props> = (props) => {
                         </tbody>
                     </table>
                 </div>
+                <div className="text-sm text-slate-100 text-center">Use keyboard shortcuts to move the robot.</div>
             </div>
         </div>
     )
